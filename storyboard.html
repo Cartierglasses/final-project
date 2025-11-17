@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIS 13 Final Project Storyboard - NetSec Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles - Professional Academic Theme */
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3 {
+            color: #000;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            border-bottom: 3px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header and Navigation */
+        .project-header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-bottom: 2px solid #dee2e6;
+            margin-bottom: 40px;
+        }
+
+        .toc {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+
+        .toc ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .toc li {
+            margin-bottom: 5px;
+        }
+
+        .toc a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        /* Storyboard Sections - Enhanced Hierarchy */
+        .storyboard-section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .storyboard-section h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .section-intro {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Improved Site Map - Tree Structure with Lines */
+        .site-map {
+            text-align: center;
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .site-map::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #ccc;
+            z-index: 1;
+        }
+
+        .site-map .page-node {
+            background-color: #f8f9fa;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            padding: 15px 20px;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            margin: 0 10px;
+            min-width: 180px;
+            transition: box-shadow 0.3s;
+        }
+
+        .site-map .page-node:hover {
+            box-shadow: 0 4px 8px rgba(0,123,255,0.2);
+        }
+
+        .site-map .root {
+            background-color: #007bff;
+            color: #fff;
+            margin-bottom: 30px;
+            display: block;
+            margin: 0 auto 30px;
+        }
+
+        .site-map .branches {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Wireframe Styles - More Detailed with Labels */
+        .wireframe {
+            border: 2px solid #dee2e6;
+            padding: 0;
+            margin: 20px 0;
+            background-color: #fff;
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            overflow: hidden;
+            font-size: 0.9em;
+        }
+
+        .wireframe-label {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: #007bff;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+        }
+
+        .wireframe .header, .wireframe .footer {
+            background-color: #e9ecef;
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+            color: #495057;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .wireframe .footer {
+            border-top: 1px solid #dee2e6;
+            border-bottom: none;
+        }
+
+        .wireframe .nav {
+            background-color: #f8f9fa;
+            padding: 8px;
+            margin: 10px 0;
+            color: #6c757d;
+            font-size: 0.85em;
+        }
+
+        .wireframe .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .wireframe .section-box {
+            border: 1px dashed #adb5bd;
+            padding: 12px;
+            background-color: #f8f9fa;
+            text-align: left;
+            color: #495057;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .wireframe .hero {
+            background-color: #e3f2fd;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.1em;
+            color: #1976d2;
+            border-radius: 4px;
+            border: 1px solid #bbdefb;
+        }
+
+        .wireframe .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+
+        .wireframe .card {
+            border: 1px solid #dee2e6;
+            padding: 8px;
+            background-color: #fff;
+            color: #495057;
+            border-radius: 4px;
+            font-size: 0.85em;
+            text-align: center;
+        }
+
+        .wireframe .video-placeholder, .wireframe .form-placeholder {
+            background-color: #f8f9fa;
+            padding: 15px;
+            text-align: center;
+            color: #6c757d;
+            border: 1px dashed #adb5bd;
+            border-radius: 4px;
+        }
+
+        /* Mobile View Indicator */
+        .mobile-view {
+            font-size: 0.8em;
+            color: #6c757d;
+            text-align: center;
+            margin-top: 10px;
+            padding: 5px;
+            background: #e9ecef;
+            border-radius: 3px;
+        }
+
+        /* Interactive Annotations - Professional Tooltips */
+        .annotation {
+            position: relative;
+            cursor: help;
+            border-bottom: 1px dotted #007bff;
+        }
+
+        .annotation::after {
+            content: attr(data-note);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            color: #333;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #dee2e6;
+            white-space: normal;
+            max-width: 250px;
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+            pointer-events: none;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            line-height: 1.4;
+        }
+
+        .annotation:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Resources List - Structured */
+        .resources {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #007bff;
+            border-radius: 4px;
+        }
+
+        .resources h3 {
+            color: #007bff;
+            margin-top: 0;
+        }
+
+        .resources ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .resources li {
+            margin-bottom: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .site-map .branches {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .wireframe {
+                min-height: 400px;
+            }
+
+            .wireframe .grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body { font-size: 12pt; }
+            .annotation::after { display: none; }
+            .zoomable { transform: none !important; }
+            .storyboard-section { box-shadow: none; page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="project-header">
+            <h1>BIS 13 Final Project Storyboard: NetSec Academy</h1>
+            <p>Educational Website on Ethical Network Penetration Testing</p>
+            <p><strong>Mission Alignment:</strong> This storyboard visualizes a 5-page site for IT students/professionals, focusing on red/blue/purple team operations with ethical emphasis. Includes responsive design notes and course integrations (e.g., dropdown nav, contact form).</p>
+        </div>
+
+        <nav class="toc" role="navigation" aria-label="Table of Contents">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#sitemap">Site Map</a></li>
+                <li><a href="#home">Home Page</a></li>
+                <li><a href="#red">Red Team Operations</a></li>
+                <li><a href="#blue">Blue Team Operations</a></li>
+                <li><a href="#purple">Purple Team Operations</a></li>
+                <li><a href="#why">Why It Matters / Resources</a></li>
+            </ul>
+        </nav>
+
+        <!-- Site Map Section -->
+        <section class="storyboard-section" id="sitemap">
+            <h2>Site Map</h2>
+            <p class="section-intro">Hierarchical structure showing user flow from Home to content pages. All pages share navigation for consistency; backlinks ensure easy traversal.</p>
+            <div class="site-map">
+                <div class="page-node root annotation" data-note="Central hub: Introduces mission and teases content.">Home (index.html)</div>
+                <div class="branches">
+                    <div class="page-node annotation" data-note="Offensive focus: Simulates attacks ethically.">Red Team (red-team.html)</div>
+                    <div class="page-node annotation" data-note="Defensive focus: Detection and response strategies.">Blue Team (blue-team.html)</div>
+                    <div class="page-node annotation" data-note="Collaborative focus: Merges red/blue for improved security.">Purple Team (purple-team.html)</div>
+                    <div class="page-node annotation" data-note="Summarizes value, provides resources and contact.">Why It Matters (why-it-matters.html)</div>
+                </div>
+            </div>
+            <div class="mobile-view">Note: On mobile, branches stack vertically for better usability.</div>
+        </section>
+
+        <!-- Home Page Storyboard -->
+        <section class="storyboard-section" id="home">
+            <h2>Home Page (index.html)</h2>
+            <p class="section-intro">Scenario: User lands here for overview. Visuals guide to deeper content via teasers.</p>
+            <div class="wireframe zoomable" wireframe-label="Desktop View">
+                <div class="header annotation" data-note="Logo left, horizontal nav menu with active Home link.">Header: NetSec Academy Logo + Nav (Home* | Red | Blue | Purple | Why)</div>
+                <div class="hero annotation" data-note="Full-width banner with background image and overlay text.">Hero: "Welcome to Ethical Pen Testing" + Mission Snippet + Explore CTA</div>
+                <div class="content">
+                    <div class="section-box annotation" data-note="3-column grid; cards link to respective pages.">What You'll Learn: [Red Card] [Blue Card] [Purple Card]</div>
+                    <div class="section-box annotation" data-note="2-column layout: Left checklist, right ethics tile with button.">Why It Matters: Ethical Checklist | Start Learning Button</div>
+                </div>
+                <div class="footer annotation" data-note="Centered copyright, quick links, contact info.">Footer: © 2025 NetSec Academy | Links | Contact</div>
+            </div>
+            <div class="mobile-view">Mobile: Hero stacks, grid becomes single column.</div>
+            <div class="resources">
+                <h3>Key Resources & Content</h3>
+                <ul>
+                    <li><strong>Visuals:</strong> Hero image (optimized PNG, alt: "Cybersecurity Network"), card icons.</li>
+                    <li><strong>Text:</strong> ~200 words overview, mission statement.</li>
+                    <li><strong>Interactions:</strong> Smooth scroll to sections, responsive grid.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Red Team Page Storyboard -->
+        <section class="storyboard-section" id="red">
+            <h2>Red Team Operations (red-team.html)</h2>
+            <p class="section-intro">Scenario: User explores offensive tactics. Flow from intro to tools, emphasizing ethics.</p>
+            <div class="wireframe zoomable" wireframe-label="Desktop View">
+                <div class="header">Header: Logo + Nav (Red Active)</div>
+                <div class="hero annotation" data-note="Themed background with red accents for offensive theme.">Hero: "Simulate Adversaries Safely" + Lead on Authorization</div>
+                <div class="content">
+                    <div class="video-placeholder annotation" data-note="Centered responsive iframe; fallback poster image.">Embedded Video: Red Team Demo</div>
+                    <div class="section-box annotation" data-note="4-card grid for objectives.">Objectives: [Exercise Response] [Identify Gaps] [Demonstrate Paths] [Remediation]</div>
+                    <div class="grid annotation" data-note="Horizontal timeline with numbered steps and icons.">Phases: 1.Scoping → 2.Recon → ... → 7.Reporting</div>
+                    <div class="section-box">Tools: 3-card grid (Recon, Exploitation, Post-Exploitation)</div>
+                    <div class="section-box annotation" data-note="Prose with bullet lists; ethical warnings highlighted.">Ethics, Reporting, Career Path</div>
+                    <div class="section-box">References: Numbered list with external links</div>
+                </div>
+                <div class="footer">Footer</div>
+            </div>
+            <div class="mobile-view">Mobile: Timeline vertical, video full-width.</div>
+            <div class="resources">
+                <h3>Key Resources & Content</h3>
+                <ul>
+                    <li><strong>Visuals:</strong> Video embed (YouTube), phase icons.</li>
+                    <li><strong>Text:</strong> ~800 words, code snippets (e.g., nmap command).</li>
+                    <li><strong>Interactions:</strong> Hover effects on cards, internal anchors.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Blue Team Page Storyboard -->
+        <section class="storyboard-section" id="blue">
+            <h2>Blue Team Operations (blue-team.html)</h2>
+            <p class="section-intro">Scenario: User learns defense. Structured layers build to metrics and playbooks.</p>
+            <div class="wireframe zoomable" wireframe-label="Desktop View">
+                <div class="header">Header: Logo + Nav (Blue Active)</div>
+                <div class="hero">Hero: "Defend with Precision" + Lead on Detection</div>
+                <div class="content">
+                    <div class="video-placeholder">Embedded Video: Blue Team Workflow</div>
+                    <div class="section-box annotation" data-note="3-card grid with icons.">Core Functions: [Visibility] [Detection] [Response]</div>
+                    <div class="grid annotation" data-note="Stacked cards with layered visuals.">Defense Layers: Identity | Endpoint | Network | Data | Cloud</div>
+                    <div class="section-box">Metrics: 5-card grid (MTTD, MTTR, etc.)</div>
+                    <div class="section-box annotation" data-note="Numbered steps with bold actions.">Playbook: Phishing Response (1-6 Steps)</div>
+                    <div class="section-box">Hardening Priorities & Career Path</div>
+                    <div class="section-box">References: Bullet list</div>
+                </div>
+                <div class="footer">Footer</div>
+            </div>
+            <div class="mobile-view">Mobile: Layers list vertically.</div>
+            <div class="resources">
+                <h3>Key Resources & Content</h3>
+                <ul>
+                    <li><strong>Visuals:</strong> Video, metric direction arrows (up/down icons).</li>
+                    <li><strong>Text:</strong> ~750 words, certification mentions.</li>
+                    <li><strong>Interactions:</strong> Expandable playbook steps.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Purple Team Page Storyboard -->
+        <section class="storyboard-section" id="purple">
+            <h2>Purple Team Operations (purple-team.html)</h2>
+            <p class="section-intro">Scenario: User understands collaboration. Flow emphasizes iterative process.</p>
+            <div class="wireframe zoomable" wireframe-label="Desktop View">
+                <div class="header">Header: Logo + Nav (Purple Active)</div>
+                <div class="hero">Hero: "Bridge Offense and Defense" + Lead on Feedback</div>
+                <div class="content">
+                    <div class="video-placeholder">Embedded Video: Purple Teaming</div>
+                    <div class="section-box">Purpose: Prose paragraph</div>
+                    <div class="grid annotation" data-note="7-step horizontal flow with icons.">Exercise Flow: Plan → Execute → ... → Retrospective</div>
+                    <div class="section-box annotation" data-note="Table-like rows for matrix.">Coverage Matrix: Technique | Source | Status | Playbook</div>
+                    <div class="section-box">KPIs: 3-card grid + Checklist</div>
+                    <div class="section-box">References: Bullet list</div>
+                </div>
+                <div class="footer">Footer</div>
+            </div>
+            <div class="mobile-view">Mobile: Flow steps as vertical list.</div>
+            <div class="resources">
+                <h3>Key Resources & Content</h3>
+                <ul>
+                    <li><strong>Visuals:</strong> Video, matrix table styling.</li>
+                    <li><strong>Text:</strong> ~700 words, ATT&CK references.</li>
+                    <li><strong>Interactions:</strong> Sidebar TOC for sections.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Why It Matters Page Storyboard -->
+        <section class="storyboard-section" id="why">
+            <h2>Why It Matters / Resources (why-it-matters.html)</h2>
+            <p class="section-intro">Scenario: User seeks validation and next steps. Ends with engagement via form.</p>
+            <div class="wireframe zoomable" wireframe-label="Desktop View">
+                <div class="header">Header: Logo + Nav (Why Active)</div>
+                <div class="content">
+                    <div class="section-box annotation" data-note="Hero-like title with lead text.">Hero Title: "Impact of Ethical Testing" + Benefits Lead</div>
+                    <div class="section-box">Benefits: 3-card grid</div>
+                    <div class="section-box">Ethics & Legal: Prose with bold warnings</div>
+                    <div class="section-box">Cert Paths: 3 sections (Red, Blue, Collab) with lists</div>
+                    <div class="section-box">Resources: Bullet list of guides</div>
+                    <div class="form-placeholder annotation" data-note="Form with labels, inputs, submit/reset; validation JS.">Contact Form: Name* | Email* | Topic | Message* | Buttons</div>
+                    <div class="grid annotation" data-note="3-column grid for tools.">Tools Glossary: [Nmap] [Wireshark] ... [YARA] (9 cards)</div>
+                    <div class="section-box">References: Numbered list with links</div>
+                </div>
+                <div class="footer">Footer</div>
+            </div>
+            <div class="mobile-view">Mobile: Form fields full-width, grid single column.</div>
+            <div class="resources">
+                <h3>Key Resources & Content</h3>
+                <ul>
+                    <li><strong>Visuals:</strong> Cert badges (icons), tool screenshots.</li>
+                    <li><strong>Text:</strong> ~900 words, disclaimer on form.</li>
+                    <li><strong>Interactions:</strong> Form validation, external link opens in new tab.</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer style="text-align: center; margin-top: 50px; padding: 20px; background: #f8f9fa; border-top: 1px solid #dee2e6;">
+            <p>Storyboard prepared for BIS 13 Final Project | November 17, 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        // Enhanced Zoom with Scale
+        document.querySelectorAll('.zoomable').forEach(function(el) {
+            el.style.transition = 'transform 0.3s ease';
+            el.addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.classList.toggle('zoomed');
+            });
+        });
+
+        // Add .zoomed style via JS if needed
+        const style = document.createElement('style');
+        style.textContent = '.zoomed { transform: scale(1.1); z-index: 5; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }';
+        document.head.appendChild(style);
+
+        // Smooth TOC scroll
+        document.querySelectorAll('.toc a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

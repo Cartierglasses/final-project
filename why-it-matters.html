@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Why It Matters &amp; Resources | NetSec Academy</title>
+  <meta name="description" content="Why penetration testing matters, ethical considerations, and curated learning resources." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">NetSec Academy</a>
+      <div class="header-actions">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="nav-red" href="red-team.html">Red Team</a></li>
+          <li><a class="nav-blue" href="blue-team.html">Blue Team</a></li>
+          <li><a class="nav-purple" href="purple-team.html">Purple Team</a></li>
+          <li><a class="active" href="why-it-matters.html">Why It Matters</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="content">
+    <div class="content-wrapper" data-collapsible>
+      <article>
+        <h1 class="page-title">Why Penetration Testing Matters</h1>
+        <p class="lead">Penetration testing, when done responsibly, helps organizations validate defenses, reduce risk, and comply with regulatory expectations.</p>
+
+        <h2 id="benefits">Benefits</h2>
+        <div class="grid grid--3">
+          <div class="card">
+            <h3>Risk Reduction</h3>
+            <p>Find exploitable weaknesses and remediate them before abuse.</p>
+          </div>
+          <div class="card">
+            <h3>Validation</h3>
+            <p>Confirm that security controls and detections operate as intended.</p>
+          </div>
+          <div class="card">
+            <h3>Readiness</h3>
+            <p>Exercise response processes, improving coordination and speed.</p>
+          </div>
+        </div>
+
+        <h2 id="ethics">Ethics &amp; Legal Considerations</h2>
+        <p>Testing must be consented and scoped. Obtain <strong>written authorization</strong> (Rules of Engagement) defining objectives, in-bounds assets, data handling, and communication. Follow applicable laws and institutional policies.</p>
+
+        <h2 id="certs-red">Red Team Certification Path</h2>
+        <ul>
+          <li><strong>Foundations:</strong> Networking, Linux/Windows internals, Python/Bash/PowerShell scripting.</li>
+          <li><strong>Entry:</strong> eJPT (Junior Penetration Tester) – practical fundamentals.</li>
+          <li><strong>Core:</strong> OSCP (OffSec Certified Professional) – full attack chain under time constraints.</li>
+          <li><strong>Advancing:</strong> PNPT (Practical Network Penetration Tester) – reporting + AD focus.</li>
+          <li><strong>Advanced:</strong> OSEP (OffSec Experienced Penetration Tester) – evasive techniques.</li>
+        </ul>
+
+        <h2 id="certs-blue">Blue Team Certification Path</h2>
+        <ul>
+          <li><strong>Foundations:</strong> Security+ (broad baseline), vendor cloud security fundamentals.</li>
+          <li><strong>Intermediate:</strong> CySA+ (analytics), SC-200 (Microsoft security operations).</li>
+          <li><strong>Specialization:</strong> GCIA (intrusion analysis), GCED (detection engineering).</li>
+          <li><strong>Leadership:</strong> CISM for governance &amp; program management.</li>
+        </ul>
+
+        <h2 id="certs-collab">Collaboration &amp; Continuous Improvement</h2>
+        <ul>
+          <li>Threat hunting labs &amp; detection engineering workshops.</li>
+          <li>DFIR practice environments (memory, disk, network forensics).</li>
+          <li>Purple team exercises mapped to ATT&amp;CK coverage goals.</li>
+          <li>Adversary emulation plans and detection validation tooling (e.g., Atomic Red Team).</li>
+        </ul>
+
+        <h2 id="resources">Curated Resources</h2>
+        <ul>
+          <li>NIST SP 800-115 – Technical Guide to Information Security Testing and Assessment.</li>
+          <li>OWASP Web Security Testing Guide (WSTG).</li>
+          <li>MITRE ATT&amp;CK knowledge base of adversary tactics &amp; techniques.</li>
+          <li>CIS Benchmarks for secure configuration baselines.</li>
+          <li>CISA Known Exploited Vulnerabilities catalog &amp; advisories.</li>
+          <li>Vendor blogs and community labs (e.g., TryHackMe, Hack The Box).</li>
+        </ul>
+
+        <h2 id="contact">Contact</h2>
+        <p>Questions about ethical practices or learning path suggestions? Send a message. No confidential or production system details please.</p>
+        <form action="#" method="post" novalidate>
+          <label for="name">Name<span class="badge" aria-hidden="true">Required</span></label>
+          <input id="name" name="name" type="text" required autocomplete="name" placeholder="Your full name" />
+          <label for="email">Email<span class="badge" aria-hidden="true">Required</span></label>
+          <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" />
+          <label for="topic">Topic</label>
+          <input id="topic" name="topic" type="text" placeholder="e.g. Detection Engineering" />
+          <label for="message">Message<span class="badge" aria-hidden="true">Required</span></label>
+          <textarea id="message" name="message" required placeholder="Write your message here..." minlength="20"></textarea>
+          <div class="form-actions">
+            <button type="submit" class="btn btn--primary">Send Message</button>
+            <button type="reset" class="btn btn--outline">Reset</button>
+          </div>
+          <p class="form-disclaimer muted">Submitting this form does not execute any backend processing in this demo.</p>
+        </form>
+
+        <h2 id="tools">Tools Glossary</h2>
+        <p class="muted">A concise glossary of widely-used tools. Always use in authorized lab or scoped assessment contexts.</p>
+        <div class="grid grid--3">
+          <div class="card"><h3>Nmap</h3><p>Network scanner for host discovery &amp; port enumeration. <code>-sV</code> identifies service versions.</p></div>
+          <div class="card"><h3>Wireshark</h3><p>GUI packet analyzer for protocol inspection, troubleshooting, and educational exploration.</p></div>
+          <div class="card"><h3>Metasploit</h3><p>Framework for exploit development and payload delivery with modular architecture.</p></div>
+          <div class="card"><h3>Burp Suite</h3><p>Web application testing platform (proxy, repeater, scanner) used to assess HTTP endpoints.</p></div>
+          <div class="card"><h3>BloodHound</h3><p>Graph analysis of Active Directory relationships to surface lateral movement paths.</p></div>
+          <div class="card"><h3>OSQuery</h3><p>SQL-like interface for querying system state across endpoints (processes, users, configs).</p></div>
+          <div class="card"><h3>Suricata</h3><p>IDS/IPS &amp; network security engine generating alerts from signatures &amp; protocol metadata.</p></div>
+          <div class="card"><h3>Sysmon</h3><p>Windows system service producing enriched event telemetry (process, network, file events).</p></div>
+          <div class="card"><h3>YARA</h3><p>Pattern matching engine for identifying malware families &amp; classifying suspicious binaries.</p></div>
+        </div>
+
+        <h2 id="references">References</h2>
+        <p>Authoritative sources for concepts on this site:</p>
+        <ul>
+          <li>NIST. “SP 800-115: Technical Guide to Information Security Testing and Assessment.” <a href="https://csrc.nist.gov/publications/detail/sp/800-115/final" target="_blank" rel="noopener">csrc.nist.gov</a></li>
+          <li>OWASP. “Web Security Testing Guide.” <a href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" rel="noopener">owasp.org</a></li>
+          <li>MITRE. “ATT&amp;CK Framework.” <a href="https://attack.mitre.org/" target="_blank" rel="noopener">attack.mitre.org</a></li>
+          <li>Center for Internet Security. “CIS Benchmarks.” <a href="https://www.cisecurity.org/cis-benchmarks" target="_blank" rel="noopener">cisecurity.org</a></li>
+          <li>CISA. “Known Exploited Vulnerabilities Catalog.” <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">cisa.gov</a></li>
+          <li>FIRST. “CSIRT Services Framework.” <a href="https://www.first.org/" target="_blank" rel="noopener">first.org</a></li>
+        </ul>
+      </article>
+
+      <aside id="page-sidebar" class="content-nav" aria-label="Page sections">
+        <h3>On this page</h3>
+        <ul>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#ethics">Ethics &amp; Legal</a></li>
+          <li><a href="#certs-red">Red Team Certs</a></li>
+          <li><a href="#certs-blue">Blue Team Certs</a></li>
+          <li><a href="#certs-collab">Collaboration</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#tools">Tools Glossary</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__grid">
+        <div>
+          <h3 class="footer-brand">NetSec Academy</h3>
+          <p class="footer-text">Practical, ethical security education aligned to trusted frameworks.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="red-team.html">Red Team</a></li>
+            <li><a href="blue-team.html">Blue Team</a></li>
+            <li><a href="purple-team.html">Purple Team</a></li>
+            <li><a href="why-it-matters.html#references">References</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="#contact">Form</a></li>
+            <li><a href="mailto:you@example.com">you@example.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-license">
+        <span>© <span id="year"></span> NetSec Academy</span>
+        <span class="muted">Educational use only</span>
+      </div>
+    </div>
+  </footer>
+  <script src="scripts/scripts.js" defer></script>
+</body>
+</html>

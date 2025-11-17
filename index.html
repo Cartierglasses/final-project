@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Educational website on ethical network penetration testing for IT students and professionals." />
+	<title>NetSec Academy | Home</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a class="brand" href="index.html">NetSec Academy</a>
+			<div class="header-actions">
+				<button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+					<span class="nav-toggle__bar"></span>
+					<span class="nav-toggle__bar"></span>
+					<span class="nav-toggle__bar"></span>
+				</button>
+			</div>
+			<nav id="site-nav" class="site-nav" aria-label="Primary">
+				<ul>
+					<li><a class="active" href="index.html">Home</a></li>
+					<li><a class="nav-red" href="red-team.html">Red Team</a></li>
+					<li><a class="nav-blue" href="blue-team.html">Blue Team</a></li>
+					<li><a class="nav-purple" href="purple-team.html">Purple Team</a></li>
+					<li><a href="why-it-matters.html">Why It Matters</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main">
+		<section class="hero">
+			<div class="container hero__inner">
+				<div class="hero__text reveal">
+					<h1>NetSec Academy</h1>
+					<p class="lead">Mission: make ethical network penetration testing approachable for students and practitioners, emphasizing legality, clarity, and defense improvement.</p>
+					<div class="hero__cta">
+						<a class="btn btn--primary" href="#overview">Explore the site</a>
+					</div>
+				</div>
+				<div class="hero__media reveal" aria-hidden="true">
+					<img src="images/hero.png" alt="" />
+				</div>
+			</div>
+		</section>
+
+		<section id="overview" class="section">
+			<div class="container">
+				<header class="section__header reveal">
+					<h2>What you'll learn</h2>
+					<p class="muted">Three perspectives, one goal: stronger systems.</p>
+				</header>
+				<div class="grid grid--3">
+					<div class="card reveal">
+						<h3>Red Team</h3>
+						<p>Adversary simulation to uncover exploitable weaknesses. Methodology, tooling, and reporting.</p>
+						<a class="card__link" href="red-team.html">Go to Red Team →</a>
+					</div>
+					<div class="card reveal">
+						<h3>Blue Team</h3>
+						<p>Detection engineering, incident response, and hardening practices mapped to ATT&amp;CK.</p>
+						<a class="card__link" href="blue-team.html">Go to Blue Team →</a>
+					</div>
+					<div class="card reveal">
+						<h3>Purple Team</h3>
+						<p>Continuous collaboration that translates techniques into validated detections.</p>
+						<a class="card__link" href="purple-team.html">Go to Purple Team →</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section--alt">
+			<div class="container">
+				<header class="section__header reveal">
+					<h2>Why it matters</h2>
+					<p class="muted">Ethical testing validates defenses and reduces risk. See guidance, certs, and references.</p>
+				</header>
+				<div class="grid grid--2">
+					<div class="reveal">
+						<ul class="checklist">
+							<li>Operate with written authorization</li>
+							<li>Prioritize safety and minimal impact</li>
+							<li>Map work to frameworks (ATT&amp;CK, OWASP)</li>
+						</ul>
+					</div>
+					<div class="cta-tile reveal">
+						<h3>Start with ethics</h3>
+						<p>Understand scope, data handling, and escalation paths before any testing begins.</p>
+						<a class="btn btn--primary" href="why-it-matters.html">Read resources</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer__inner">
+			<div class="footer__grid">
+				<div>
+					<h3 class="footer-brand">NetSec Academy</h3>
+					<p class="footer-text">Practical, ethical security education aligned to trusted frameworks.</p>
+				</div>
+				<div>
+					<h4>Quick Links</h4>
+					<ul class="footer-links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="red-team.html">Red Team</a></li>
+						<li><a href="blue-team.html">Blue Team</a></li>
+						<li><a href="purple-team.html">Purple Team</a></li>
+						<li><a href="why-it-matters.html#references">References</a></li>
+					</ul>
+				</div>
+				<div>
+					<h4>Contact</h4>
+					<ul class="footer-links">
+						<li><a href="why-it-matters.html#contact">Contact Form</a></li>
+						<li><a href="mailto:you@example.com">you@example.com</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-license">
+				<span>© <span id="year"></span> NetSec Academy</span>
+				<span class="muted">Educational use only</span>
+			</div>
+		</div>
+	</footer>
+
+	<script src="scripts/scripts.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Red Team Operations | NetSec Academy</title>
+  <meta name="description" content="Red team fundamentals: offensive security methodology, tooling, and ethical boundaries." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">NetSec Academy</a>
+      <div class="header-actions">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active nav-red" href="red-team.html">Red Team</a></li>
+          <li><a class="nav-blue" href="blue-team.html">Blue Team</a></li>
+          <li><a class="nav-purple" href="purple-team.html">Purple Team</a></li>
+          <li><a href="why-it-matters.html">Why It Matters</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="content">
+    <section class="page-hero page-hero--red">
+      <div class="container">
+        <h1 class="page-title">Red Team Operations</h1>
+        <p class="lead">Red teaming emulates real adversaries to help organizations uncover exploitable weaknesses before they are abused. All activities must be <strong>authorized</strong>, <strong>scoped</strong>, and <strong>documented</strong>.</p>
+      </div>
+    </section>
+
+      <!-- Responsive Red Team Video -->
+      <section class="section">
+        <div class="container">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/rHxYZwMz-DY" title="Red Team Video" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+      <div class="content-wrapper" data-collapsible>
+      <article>
+        <section class="section" id="objectives">
+          <div class="container">
+            <h2>Objectives</h2>
+            <div class="grid grid--2">
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-crosshairs"></i></div>
+                <h3>Exercise Response</h3>
+                <p>Test incident response and detection controls to ensure they work under pressure.</p>
+              </div>
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-search"></i></div>
+                <h3>Identify Gaps</h3>
+                <p>Uncover security control gaps and misconfigurations in real-world scenarios.</p>
+              </div>
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-route"></i></div>
+                <h3>Demonstrate Paths</h3>
+                <p>Show realistic attack paths and their potential impact on business operations.</p>
+              </div>
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-clipboard-check"></i></div>
+                <h3>Remediation Guidance</h3>
+                <p>Provide structured, prioritized recommendations for fixing identified issues.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--alt" id="phases">
+          <div class="container">
+            <h2>Typical Engagement Phases</h2>
+            <div class="phase-timeline">
+              <div class="phase-card">
+                <div class="phase-number">1</div>
+                <h3>Scoping</h3>
+                <p>Define targets &amp; rules of engagement</p>
+                <small>Signed ROE, asset list</small>
+              </div>
+              <div class="phase-card">
+                <div class="phase-number">2</div>
+                <h3>Reconnaissance</h3>
+                <p>Discover attack surface</p>
+                <small>Host/service inventory</small>
+              </div>
+              <div class="phase-card">
+                <div class="phase-number">3</div>
+                <h3>Weaponization</h3>
+                <p>Prepare payloads &amp; infrastructure</p>
+                <small>Stagers, redirectors</small>
+              </div>
+              <div class="phase-card">
+                <div class="phase-number">4</div>
+                <h3>Exploitation</h3>
+                <p>Gain initial foothold</p>
+                <small>Shells, credentials</small>
+              </div>
+              <div class="phase-card">
+                <div class="phase-number">5</div>
+                <h3>Privilege Escalation</h3>
+                <p>Expand capabilities</p>
+                <small>Elevated tokens, persistence</small>
+              </div>
+              <div class="phase-card">
+                <div class="phase-number">6</div>
+                <h3>Post-Exploitation</h3>
+                <p>Demonstrate lateral movement &amp; impact</p>
+                <small>Data access evidence</small>
+              </div>
+              <div class="phase-card">
+                <div class="phase-number">7</div>
+                <h3>Reporting</h3>
+                <p>Communicate findings &amp; fixes</p>
+                <small>Executive + technical report</small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="tools">
+          <div class="container">
+            <h2>Representative Tools</h2>
+            <div class="grid grid--3">
+              <div class="card">
+                <h3>Recon</h3>
+                <p>amass, subfinder, dnsx for external enumeration; <code>nmap</code> for port scanning.</p>
+              </div>
+              <div class="card">
+                <h3>Exploitation</h3>
+                <p>Metasploit Framework, <code>sqlmap</code>, custom scripts; careful logging maintained.</p>
+              </div>
+              <div class="card">
+                <h3>Post Exploitation</h3>
+                <p>Empire, Cobalt Strike (licensed), BloodHound for Active Directory path analysis.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--alt" id="ethics">
+          <div class="container">
+            <h2>Ethics &amp; Boundaries</h2>
+            <p>Never attempt actions beyond the agreed scope. Avoid impacting production availability; coordinate any potentially disruptive techniques (e.g., password spraying, DDoS simulations) with stakeholders.</p>
+            <h2>Reporting Structure</h2>
+            <p>Reports should map each finding to risk ratings (e.g., CVSS / internal scale), affected assets, reproducible steps, business impact narrative, and explicit remediation recommendations ordered by priority.</p>
+            <h2>Career Path</h2>
+            <p>Red teamers often begin in help desk, system administration, or junior pentesting roles, progressively learning scripting, exploit development, and adversary simulation frameworks. Certifications: <strong>OSCP</strong>, <strong>CRTP</strong>, <strong>OSEP</strong>, <strong>CRT</strong>.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <h2 id="references">References</h2>
+            <ul>
+              <li>MITRE ATT&amp;CK Framework – <a href="https://attack.mitre.org/" target="_blank" rel="noopener">https://attack.mitre.org/</a></li>
+              <li>NIST SP 800-115 Technical Guide to Information Security Testing</li>
+              <li>OWASP Testing Guide v5 – <a href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" rel="noopener">OWASP WSTG</a></li>
+              <li>SANS Pentesting Curriculum – <a href="https://www.sans.org/cyber-security-courses/" target="_blank" rel="noopener">SANS Courses</a></li>
+            </ul>
+          </div>
+        </section>
+      </article>
+
+      <aside id="page-sidebar" class="content-nav" aria-label="Page sections">
+        <h3>On this page</h3>
+        <ul>
+          <li><a href="#objectives">Objectives</a></li>
+          <li><a href="#phases">Engagement Phases</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#ethics">Ethics &amp; Career</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__grid">
+        <div>
+          <h3 class="footer-brand">NetSec Academy</h3>
+          <p class="footer-text">Practical, ethical security education aligned to trusted frameworks.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="red-team.html">Red Team</a></li>
+            <li><a href="blue-team.html">Blue Team</a></li>
+            <li><a href="purple-team.html">Purple Team</a></li>
+            <li><a href="why-it-matters.html#references">References</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="why-it-matters.html#contact">Form</a></li>
+            <li><a href="mailto:you@example.com">you@example.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-license">
+        <span>© <span id="year"></span> NetSec Academy</span>
+        <span class="muted">Educational use only</span>
+      </div>
+    </div>
+  </footer>
+  <script src="scripts/scripts.js" defer></script>
+</body>
+</html>

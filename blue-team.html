@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blue Team Operations | NetSec Academy</title>
+  <meta name="description" content="Blue team defensive strategies, detection engineering, response workflows, and hardening guidance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">NetSec Academy</a>
+      <div class="header-actions">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="nav-red" href="red-team.html">Red Team</a></li>
+          <li><a class="active nav-blue" href="blue-team.html">Blue Team</a></li>
+          <li><a class="nav-purple" href="purple-team.html">Purple Team</a></li>
+          <li><a href="why-it-matters.html">Why It Matters</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="content">
+    <section class="page-hero page-hero--blue">
+      <div class="container">
+        <h1 class="page-title">Blue Team Operations</h1>
+        <p class="lead">Blue teams defend, detect, respond, and strengthen systems. Their success is measured by minimized dwell time and reduced business impact.</p>
+      </div>
+    </section>
+
+      <!-- Responsive Blue Team Video -->
+      <section class="section">
+        <div class="container">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/gvhvXCJ6CAU" title="Blue Team Video" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+      <div class="content-wrapper" data-collapsible>
+      <article>
+        <section class="section" id="functions">
+          <div class="container">
+            <h2>Core Functions</h2>
+            <div class="grid grid--3">
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-eye"></i></div>
+                <h3>Visibility</h3>
+                <p>Logging strategy across endpoints, network, identity, and cloud control planes.</p>
+              </div>
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-search-plus"></i></div>
+                <h3>Detection Engineering</h3>
+                <p>Craft alerts mapped to MITRE ATT&amp;CK tactics to surface suspicious behaviors quickly.</p>
+              </div>
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Incident Response</h3>
+                <p>Documented playbooks for triage, containment, eradication, and recovery.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--alt" id="layers">
+          <div class="container">
+            <h2>Defense-in-Depth Layers</h2>
+            <div class="defense-layers">
+              <div class="layer-card">
+                <h3>Identity</h3>
+                <p>MFA enforcement, least privilege, conditional access.</p>
+              </div>
+              <div class="layer-card">
+                <h3>Endpoint</h3>
+                <p>EDR agents, application control, patch cadence.</p>
+              </div>
+              <div class="layer-card">
+                <h3>Network</h3>
+                <p>Segmentation, TLS inspection (lawful), IDS/IPS, secure baseline configs.</p>
+              </div>
+              <div class="layer-card">
+                <h3>Data</h3>
+                <p>Encryption at rest &amp; in transit, classification, backups, DLP rules.</p>
+              </div>
+              <div class="layer-card">
+                <h3>Cloud</h3>
+                <p>CIS benchmark baselines, resource hygiene, continuous config auditing.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="metrics">
+          <div class="container">
+            <h2>Metrics &amp; KPIs</h2>
+            <div class="grid grid--2">
+              <div class="metric-card">
+                <h3>MTTD (Mean Time to Detect)</h3>
+                <p>Lower means faster discovery of threats</p>
+                <span class="metric-direction">Decrease</span>
+              </div>
+              <div class="metric-card">
+                <h3>MTTR (Mean Time to Respond)</h3>
+                <p>Lower reduces potential damage</p>
+                <span class="metric-direction">Decrease</span>
+              </div>
+              <div class="metric-card">
+                <h3>False Positive Rate</h3>
+                <p>High rate wastes analyst time</p>
+                <span class="metric-direction">Decrease</span>
+              </div>
+              <div class="metric-card">
+                <h3>Patch Compliance %</h3>
+                <p>Indicates exposure reduction</p>
+                <span class="metric-direction">Increase</span>
+              </div>
+              <div class="metric-card">
+                <h3>Coverage vs ATT&amp;CK</h3>
+                <p>Detection completeness across tactics</p>
+                <span class="metric-direction">Increase</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--alt" id="playbook">
+          <div class="container">
+            <h2>Playbook Example (Phishing)</h2>
+            <ol class="playbook-steps">
+              <li><strong>Triage alert;</strong> capture headers &amp; artifacts.</li>
+              <li><strong>Quarantine malicious messages &amp; impacted endpoints.</strong></li>
+              <li><strong>Extract indicators;</strong> update blocklists and detection rules.</li>
+              <li><strong>Communicate with stakeholders &amp; affected users.</strong></li>
+              <li><strong>Retrospective search for lateral movement.</strong></li>
+              <li><strong>Lessons learned + playbook refinement.</strong></li>
+            </ol>
+            <h2>Hardening Priorities</h2>
+            <p>Focus first on exposed services, privileged account hygiene, patching of internet-facing assets, and backup verifications. Use configuration baselines (CIS Benchmarks) and regularly audit for drift.</p>
+            <h2>Career Path</h2>
+            <p>Blue team members often start in system administration or SOC analyst roles. Growth includes threat hunting, detection engineering, and IR leadership. Certifications: <strong>Security+</strong>, <strong>CySA+</strong>, <strong>GCIA</strong>, <strong>GCED</strong>, <strong>CISM</strong>.</p>
+          </div>
+        </section>
+
+        <section class="section" id="references">
+          <div class="container">
+            <h2>References</h2>
+            <ul>
+              <li>MITRE ATT&amp;CK – <a href="https://attack.mitre.org/" target="_blank" rel="noopener">Framework</a></li>
+              <li>NIST SP 800-61 Rev.2 Computer Security Incident Handling Guide</li>
+              <li>CIS Benchmarks – <a href="https://www.cisecurity.org/cis-benchmarks" target="_blank" rel="noopener">cisecurity.org</a></li>
+              <li>FIRST CSIRT Services Framework – <a href="https://www.first.org/" target="_blank" rel="noopener">FIRST.org</a></li>
+            </ul>
+          </div>
+        </section>
+      </article>
+
+      <aside id="page-sidebar" class="content-nav" aria-label="Page sections">
+        <h3>On this page</h3>
+        <ul>
+          <li><a href="#functions">Core Functions</a></li>
+          <li><a href="#layers">Defense Layers</a></li>
+          <li><a href="#metrics">Metrics &amp; KPIs</a></li>
+          <li><a href="#playbook">Playbook &amp; Career</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__grid">
+        <div>
+          <h3 class="footer-brand">NetSec Academy</h3>
+          <p class="footer-text">Practical, ethical security education aligned to trusted frameworks.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="red-team.html">Red Team</a></li>
+            <li><a href="blue-team.html">Blue Team</a></li>
+            <li><a href="purple-team.html">Purple Team</a></li>
+            <li><a href="why-it-matters.html#references">References</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="why-it-matters.html#contact">Form</a></li>
+            <li><a href="mailto:you@example.com">you@example.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-license">
+        <span>© <span id="year"></span> NetSec Academy</span>
+        <span class="muted">Educational use only</span>
+      </div>
+    </div>
+  </footer>
+  <script src="scripts/scripts.js" defer></script>
+</body>
+</html>

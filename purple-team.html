@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Purple Team Operations | NetSec Academy</title>
+  <meta name="description" content="Purple teaming bridges offensive and defensive efforts to accelerate detection and resilience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">NetSec Academy</a>
+      <div class="header-actions">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="nav-red" href="red-team.html">Red Team</a></li>
+          <li><a class="nav-blue" href="blue-team.html">Blue Team</a></li>
+          <li><a class="active nav-purple" href="purple-team.html">Purple Team</a></li>
+          <li><a href="why-it-matters.html">Why It Matters</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="content">
+    <section class="page-hero page-hero--purple">
+      <div class="container">
+        <h1 class="page-title">Purple Team Collaboration</h1>
+        <p class="lead">Purple teaming is a <strong>continuous feedback loop</strong> between offensive simulation and defensive improvement. It shortens the path from “attack executed” to “detect reliably”.</p>
+      </div>
+    </section>
+
+      <!-- Responsive Purple Team Video -->
+      <section class="section">
+        <div class="container">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/GRTa7HfJC6w" title="Purple Team Video" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+      <div class="content-wrapper" data-collapsible>
+      <article>
+        <section class="section" id="purpose">
+          <div class="container">
+            <h2>Purpose</h2>
+            <p>Rather than a separate permanent team, purple teaming is often an <em>operational practice</em> bringing together red and blue functions in structured exercises. The goal: translate adversary techniques into actionable, tested detections and response playbooks.</p>
+          </div>
+        </section>
+
+        <section class="section section--alt" id="flow">
+          <div class="container">
+            <h2>Collaborative Exercise Flow</h2>
+            <div class="flow-steps">
+              <div class="flow-step">
+                <div class="flow-icon"><i class="fas fa-clipboard-list"></i></div>
+                <h3>Plan</h3>
+                <p>Select tactics/techniques (ATT&amp;CK), define success criteria &amp; data sources.</p>
+              </div>
+              <div class="flow-step">
+                <div class="flow-icon"><i class="fas fa-fist-raised"></i></div>
+                <h3>Execute</h3>
+                <p>Red simulates technique transparently; blue observes raw telemetry.</p>
+              </div>
+              <div class="flow-step">
+                <div class="flow-icon"><i class="fas fa-chart-bar"></i></div>
+                <h3>Baseline</h3>
+                <p>Capture logs; confirm visibility &amp; differentiate noise.</p>
+              </div>
+              <div class="flow-step">
+                <div class="flow-icon"><i class="fas fa-wrench"></i></div>
+                <h3>Engineer Detection</h3>
+                <p>Draft logic using fields (e.g., process, parent, cmdline, auth events).</p>
+              </div>
+              <div class="flow-step">
+                <div class="flow-icon"><i class="fas fa-check-circle"></i></div>
+                <h3>Validate</h3>
+                <p>Re-run technique until alert triggers with minimal false positives.</p>
+              </div>
+              <div class="flow-step">
+                <div class="flow-icon"><i class="fas fa-edit"></i></div>
+                <h3>Document</h3>
+                <p>Detection logic, enrichment steps, response actions, KPIs.</p>
+              </div>
+              <div class="flow-step">
+                <div class="flow-icon"><i class="fas fa-sync"></i></div>
+                <h3>Retrospective</h3>
+                <p>Lessons learned; prioritize next techniques by risk &amp; coverage gaps.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="matrix">
+          <div class="container">
+            <h2>Coverage Matrix Example</h2>
+            <div class="coverage-matrix">
+              <div class="matrix-row">
+                <span class="technique">T1059 Command Execution</span>
+                <span class="source">EDR, Sysmon, Bash history</span>
+                <span class="status status-alert">Alert in staging</span>
+                <span class="playbook">Yes</span>
+              </div>
+              <div class="matrix-row">
+                <span class="technique">T1078 Valid Accounts</span>
+                <span class="source">Auth logs, CloudTrail</span>
+                <span class="status status-progress">In progress</span>
+                <span class="playbook">No</span>
+              </div>
+              <div class="matrix-row">
+                <span class="technique">T1046 Network Service Scanning</span>
+                <span class="source">Flow logs, IDS</span>
+                <span class="status status-tuned">Alert tuned</span>
+                <span class="playbook">Yes</span>
+              </div>
+              <div class="matrix-row">
+                <span class="technique">T1566 Phishing</span>
+                <span class="source">Email gateway, proxy logs</span>
+                <span class="status status-partial">Partial (needs URL det.)</span>
+                <span class="playbook">Yes</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--alt" id="kpis">
+          <div class="container">
+            <h2>KPIs &amp; Outcomes</h2>
+            <div class="grid grid--3">
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-clock"></i></div>
+                <h3>Detection Lag</h3>
+                <p>Time from execution to alert creation &amp; successful test.</p>
+              </div>
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Technique Coverage %</h3>
+                <p>Portion of selected techniques with validated detection + playbook.</p>
+              </div>
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                <h3>False Positive Ratio</h3>
+                <p>Volume of benign events matched by new logic during tuning window.</p>
+              </div>
+            </div>
+            <h2>Success Characteristics</h2>
+            <ul class="checklist">
+              <li>Transparent collaboration (no adversarial secrecy).</li>
+              <li>Shared language: MITRE tactic/technique IDs.</li>
+              <li>Documented log field catalog.</li>
+              <li>Dedicated iteration cycles &amp; retrospectives.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <h2 id="references">References</h2>
+            <ul>
+              <li>MITRE ATT&amp;CK – Technique catalog (<a href="https://attack.mitre.org/" target="_blank" rel="noopener">attack.mitre.org</a>)</li>
+              <li>Unified Kill Chain – Collaboration perspective</li>
+              <li>Cyentia Research reports (trends &amp; metrics)</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+
+      <aside id="page-sidebar" class="content-nav" aria-label="Page sections">
+        <h3>On this page</h3>
+        <ul>
+          <li><a href="#purpose">Purpose</a></li>
+          <li><a href="#flow">Exercise Flow</a></li>
+          <li><a href="#matrix">Coverage Matrix</a></li>
+          <li><a href="#kpis">KPIs &amp; Outcomes</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__grid">
+        <div>
+          <h3 class="footer-brand">NetSec Academy</h3>
+          <p class="footer-text">Practical, ethical security education aligned to trusted frameworks.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="red-team.html">Red Team</a></li>
+            <li><a href="blue-team.html">Blue Team</a></li>
+            <li><a href="purple-team.html">Purple Team</a></li>
+            <li><a href="why-it-matters.html#references">References</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="why-it-matters.html#contact">Form</a></li>
+            <li><a href="mailto:you@example.com">you@example.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-license">
+        <span>© <span id="year"></span> NetSec Academy</span>
+        <span class="muted">Educational use only</span>
+      </div>
+    </div>
+  </footer>
+  <script src="scripts/scripts.js" defer></script>
+</body>
+</html>
