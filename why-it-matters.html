@@ -8,8 +8,57 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNB[...]"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNB[...]" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Styled media section and responsive video container */
+    .media {
+      background: #f8fafc;
+      border: 1px solid #e6eef6;
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 1.25rem 0 1.75rem;
+      box-shadow: 0 2px 6px rgba(15,23,42,0.03);
+    }
+    .media h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.05rem;
+      color: #0f172a;
+    }
+    .media p.muted { color: #6b7280; margin-top: 0.5rem; }
+
+    /* Responsive video wrapper (maintains 16:9 aspect ratio) */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      width: 100%;
+      max-width: 100%;
+    }
+    .video-wrapper iframe,
+    .video-wrapper object,
+    .video-wrapper embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Make the definition section layout adapt on narrow screens */
+    @media (min-width: 700px) {
+      .media { display: flex; gap: 1rem; align-items: flex-start; }
+      .media .video-wrapper { flex: 1 1 60%; }
+      .media .intro-text { flex: 1 1 40%; }
+    }
+
+    @media (max-width: 699px) {
+      .page-title { font-size: 1.6rem; }
+      .lead { font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -42,12 +91,15 @@
         <p class="lead">Penetration testing, when done responsibly, helps organizations validate defenses, reduce risk, and comply with regulatory expectations.</p>
 
         <h2 id="definition">What is Penetration Testing?</h2>
-        <p>Penetration testing (often shortened to "pentesting") is a simulated, authorized cyber attack against an organization's systems, applications, networks, or people performed to discover and validate security weaknesses before malicious actors can exploit them. A pentest typically combines automated scanning with manual exploitation, follows an agreed scope and rules of engagement, and produces actionable findings and prioritized remediation guidance.</p>
+        <p>Penetration testing (often shortened to "pentesting") is a simulated, authorized cyber attack against an organization's systems, applications, networks, or people performed to discover and validate security weaknesses before malicious actors can exploit them. A pentest typically combines automated scanning with manual verification and exploitation, follows an agreed scope and rules of engagement, and delivers actionable findings, risk-rating, and prioritized remediation guidance to improve the security posture.</p>
 
         <div class="media" id="intro-video">
-          <h3>Introductory Video</h3>
+          <div class="intro-text">
+            <h3>Introductory Video</h3>
+            <p class="muted">Below is a short explainer covering the goals and typical workflow of a penetration test. The video is embedded responsively so it adapts across devices.</p>
+          </div>
           <div class="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/C43CwRkqM24" title="What is Penetration Testing?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/C43CwRkqM24" title="What is Penetration Testing?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <p class="muted">Source: YouTube — "What is Penetration Testing?"</p>
         </div>
@@ -69,7 +121,7 @@
         </div>
 
         <h2 id="ethics">Ethics &amp; Legal Considerations</h2>
-        <p>Testing must be consented and scoped. Obtain <strong>written authorization</strong> (Rules of Engagement) defining objectives, in-bounds assets, data handling, and communication. Follow app[...]</p>
+        <p>Testing must be consented and scoped. Obtain <strong>written authorization</strong> (Rules of Engagement) defining objectives, in-bounds assets, data handling, and communication. Follow applicable laws, coordinate disclosure with stakeholders, and avoid testing beyond agreed boundaries to prevent operational impact.</p>
 
         <h2 id="certs-red">Red Team Certification Path</h2>
         <ul>
@@ -141,7 +193,7 @@
         <h2 id="references">References</h2>
         <p>Authoritative sources for concepts on this site:</p>
         <ul>
-          <li>NIST. “SP 800-115: Technical Guide to Information Security Testing and Assessment.” <a href="https://csrc.nist.gov/publications/detail/sp/800-115/final" target="_blank" rel="noopener[...]"
+          <li>NIST. “SP 800-115: Technical Guide to Information Security Testing and Assessment.” <a href="https://csrc.nist.gov/publications/detail/sp/800-115/final" target="_blank" rel="noopener">csrc.nist.gov</a></li>
           <li>OWASP. “Web Security Testing Guide.” <a href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" rel="noopener">owasp.org</a></li>
           <li>MITRE. “ATT&amp;CK Framework.” <a href="https://attack.mitre.org/" target="_blank" rel="noopener">attack.mitre.org</a></li>
           <li>Center for Internet Security. “CIS Benchmarks.” <a href="https://www.cisecurity.org/cis-benchmarks" target="_blank" rel="noopener">cisecurity.org</a></li>
